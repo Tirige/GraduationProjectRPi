@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="SourceFiles" displayName="ソース・ファイル" projectFiles="true">
+      <itemPath>BluetoothCommunicationManager.cpp</itemPath>
+      <itemPath>CommunicationManager.cpp</itemPath>
+      <itemPath>GpsSensor.cpp</itemPath>
+      <itemPath>MovieServerManager.cpp</itemPath>
+      <itemPath>WifiCommunicationManager.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles" displayName="ヘッダー・ファイル" projectFiles="true">
+      <itemPath>BluetoothCommunicationManager.h</itemPath>
+      <itemPath>CommunicationManager.h</itemPath>
+      <itemPath>GpsSensor.h</itemPath>
+      <itemPath>MovieServerManager.h</itemPath>
+      <itemPath>WifiCommunicationManager.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="リソース・ファイル" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="テスト・ファイル"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要なファイル"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <commandLine>-lwiringPi</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="BluetoothCommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BluetoothCommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GpsSensor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GpsSensor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MovieServerManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MovieServerManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WifiCommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WifiCommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="BluetoothCommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BluetoothCommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GpsSensor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GpsSensor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MovieServerManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MovieServerManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WifiCommunicationManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WifiCommunicationManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
