@@ -23,7 +23,7 @@ class CommunicationManager{
 public:
     BluetoothCommunicationManager BCM;
     WifiCommunicationManager WCM;
-    void Arduino_Communication_Send();
+    void Arduino_Communication_Send(std::string send_string);
     void Arduino_Communication_Get();
     void Host_Communication_Send();
     void Host_Communication_Get();
