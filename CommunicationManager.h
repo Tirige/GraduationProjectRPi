@@ -15,6 +15,7 @@
 #include "WifiCommunicationManager.h"
 #include "wiringPi.h"
 #include "wiringSerial.h"
+#include <string>
 
 
 extern int serial_arduino;//Arduinoとの通信id
@@ -23,11 +24,10 @@ class CommunicationManager{
 public:
     BluetoothCommunicationManager BCM;
     WifiCommunicationManager WCM;
-    void Arduino_Communication_Send();
-    void Arduino_Communication_Get();
+    std::string Arduino_Communication_Get();
+    void Arduino_Communication_Send(std::string send_string);
     void Host_Communication_Send();
-    void Host_Communication_Get();
+    std::string Host_Communication_Get();
 };
 
 #endif	/* COMMUNICATIONMANAGER_H */
-

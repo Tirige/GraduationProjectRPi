@@ -5,28 +5,37 @@
 #include "CommunicationManager.h"
 #include <fstream>
 #include <iostream>
+#include <string>
 
 
-
-
-void CommunicationManager::Arduino_Communication_Get()
+std::string CommunicationManager::Arduino_Communication_Get()
 {
     std::cout << "Arduino_Get" << std::endl;
-    int my_getchars;
+    std::string my_getchars;
     //serial_arduinoはmainにて宣言された物
     if(serialDataAvail(serial_arduino) > 0){
             delay(100);
             while(serialDataAvail(serial_arduino)){
-                my_getchars = serialGetchar(serial_arduino);
-                std::cout << (char)my_getchars;//本来はここに変数を置き記録する。
+                my_getchars = my_getchars + (char)(int)serialGetchar(serial_arduino);
+                //std::cout << (char)my_getchars;//本来はここに変数を置き記録する。
             }
             std::cout << std::endl;
     }
+    return my_getchars;
 };
 
-void CommunicationManager::Arduino_Communication_Send()
+void CommunicationManager::Arduino_Communication_Send(std::string send_string)
 {
     std::cout << "Arduino_Send" << std::endl;
+    int fd = serialOpen("/dev/ttyUSB0",9600);//initを作った方がいいかも？
+    //ls /dev/tty* にて確認できたUSB番号を入れる。
+    if(fd<0){
+        //USBがつながらない場合はsudo rebootするとできるようになるかも
+        std::cout << "can not open serialport" << std::endl;
+        return;
+    }
+    std::cout << "wiring serial setup :" << std::endl;
+    serialPuts(fd,send_string.c_str());
 };
 
 std::string CommunicationManager::Host_Communication_Get()
